@@ -1,81 +1,152 @@
-@import url('normalize.css');
-/* Mobile first */
-
-/* Redefine HTML styles 00# */
-body{
-    font: smaller/160% sans-serif;
-    color: #999999;
-    margin: 0 auto;
+@import 'normalize.css';
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+#page {
+  position: relative;
+  width: 100%;
+  left: auto;
+  right: auto;
+  margin-top: 36px;
 }
-header,footer{
-	clear: both;
+body {
+  font: 14px/1.5 'Open Sans', sans-serif;
+  color: #808080;
+  width: 100%;
+  margin: 0 auto;
 }
-nav ul{
-    text-align: center;
-    padding: 0;
-    margin: 24px 0;
-    height: 24px;
-    list-style: none;
+h1,
+h2,
+3 {
+  font-weight: 600;
 }
-nav li{
-    width: 46%;
+header {
+  background-color: #808080;
+}
+header h1 {
+  font-size: 24px;
+  padding: 20px;
+  background: #f3f3f3;
+  text-align: center;
+}
+header nav li {
+  width: 100%;
+  text-align: center;
+}
+header nav li a {
+  display: block;
+  padding: 6px 0;
+  background-color: #808080;
+  color: #e6e6e6;
+  text-decoration: none;
+}
+section {
+  clear: both;
+}
+section h2 {
+  font-size: 24px;
+  padding: 24px 0;
+}
+section p img {
+  width: 100%;
+}
+section.second p {
+  margin: 24px 16px;
+}
+section.second p img {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+section.second p a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: 600;
+}
+footer {
+  clear: both;
+}
+footer li {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+footer li a {
+  display: block;
+  padding: 6px 0;
+  background-color: #808080;
+  color: #e6e6e6;
+  text-decoration: none;
+}
+footer li ul + ul {
+  position: absolute;
+  top: -24px;
+  right: 0px;
+}
+/*Tablet*/
+@media (min-device-width: 481px) {
+  body {
+    font-size: 16px;
+    width: 750px;
+  }
+  header {
+    clear: both;
+  }
+  header h1 {
+    width: 290px;
     float: left;
-    margin: 0 2%;
+    padding: 34px 20px;
+  }
+  header nav {
+    width: 420px;
+    float: right;
+  }
+  header nav li {
+    width: 140px;
+    float: left;
+  }
+  header nav li a {
+    padding: 14px 0;
+  }
+  footer nav ul + ul {
+    position: absolute;
+    top: -24px;
+    right: 0px;
+  }
+  footer nav ul + ul li {
+    width: 140px;
+  }
+  section {
+    clear: both;
+  }
+  section.second p {
+    width: 290px;
+    float: left;
+  }
+  section.second p + p {
+    width: 396px;
+    float: right;
+  }
+  section div {
+    clear: both;
+  }
 }
-nav a{
-    text-decoration: none;
-    color: #FFFFFF;
-    background-color: #333333;
-    display: block;
-    padding: 5px 0;
+@media (min-device-width: 960px) {
+  body {
+    width: 960px;
+  }
+  header h1 {
+    width: 290px;
+    padding: 8px 20px;
+    text-align: left;
+  }
+  header nav {
+    width: 630px;
+  }
+  header nav li {
+    width: 105px;
+  }
+  section.second p + p {
+    width: 606px;
+  }
 }
-nav a:hover{
-    background-color: #999999;
-    color: #333333;
-}
-footer li{
-     width: 46%;
- }
-h1{
-    padding: 24px 10px;
-}
-
-div img{
-    width: 100%;
-}
-footer p{
-    padding: 10px;
-}
-/* Class based styles 0#0 */
-section .subsection{
-	width: 96%;
-	margin: 24px 2%;
-	float: left;
-}
-/* ID based styles #00 */
-
-
-/* Medium screens */
-@media(min-width: 768px){
-	nav li{
-		width: 12.66%;
-	}
-	footer li{
-	     width: 46%;
-	 }
-}
-
-/* Large screen */
-@media(min-width: 940px){
-	body{
-		max-width: 960px;
-	}
-	section .subsection{
-		width: 46%;
-	}
-}
-
-
-
-
-
+/* Tablet max 750px */
+/* Desktop */
