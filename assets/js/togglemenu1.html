@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Toggle Menu One</title>
+    <script>
+function togglemenu1(menuId){
+
+}
+    </script>
+    <style>
+        .subMenu{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h1>Toggle Menu One</h1>
+<nav>
+    <ul>
+        <li><a href="#">Menu One</a></li>
+        <li><a href="#" onclick="togglemenu1('top')">Menu Two</a>
+        <ul class=" subMenu" id="top">
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+        </ul>
+        </li>
+
+        <li><a href="#">Menu Three</a></li>
+        <li><a href="#" onclick="togglemenu1('bottom')">Menu Four</a>
+    <ul class="subMenu" id="bottom">
+    <li>item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    </ul>
+    </li>
+    </ul>
+</nav>
+<h2>Contents Starts Here</h2>
+</body>
+</html>  
